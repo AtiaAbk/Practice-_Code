@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 df = pd.read_csv('CompleteDataSet (2).csv', low_memory=False)
-# keep original df for reference, make a numeric-converted copy for plotting
+
 print('Initial shape:', df.shape)
 print('Columns preview:', list(df.columns)[:10])
 
