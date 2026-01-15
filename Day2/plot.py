@@ -7,7 +7,6 @@ df = pd.read_csv('CompleteDataSet (2).csv', low_memory=False)
 print('Initial shape:', df.shape)
 print('Columns preview:', list(df.columns)[:10])
 
-# Convert columns to numeric where possible (coerce errors to NaN)
 df_numeric = df.apply(lambda col: pd.to_numeric(col, errors='coerce'))
 
 # List detected numeric columns
