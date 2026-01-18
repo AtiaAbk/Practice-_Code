@@ -21,7 +21,6 @@ plt.ylabel('Frequency')
 plt.tight_layout()
 plt.show()
 
-# Alternative: Histogram for Subject using Seaborn
 plt.figure(figsize=(10, 6))
 sns.histplot(data=df, x='Subject', bins=15, kde=True, edgecolor='black')
 plt.title('Histogram of Subject')
