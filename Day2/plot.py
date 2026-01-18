@@ -9,14 +9,10 @@ print('Columns preview:', list(df.columns)[:10])
 
 df_numeric = df.apply(lambda col: pd.to_numeric(col, errors='coerce'))
 
-# List detected numeric columns
 numeric_cols = [c for c in df_numeric.columns if df_numeric[c].notna().sum() > 0]
 print('Detected numeric columns (sample):', numeric_cols[:20])
 
-# Use a cleaned numeric dataframe for plotting (do not drop all rows globally)
 
-
-# Create histogram for Activity column
 plt.figure(figsize=(10, 6))
 df['Activity'].hist(bins=30, edgecolor='black', color='skyblue')
 plt.title('Histogram of Activity')
